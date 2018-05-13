@@ -200,5 +200,18 @@ INSERT INTO direccion VALUES (idDireccion.nextval,'150 al oeste de la piedra ama
 INSERT INTO direccion VALUES (idDireccion.nextval,'50 al sur de la piedra de la iglesia');
 INSERT INTO direccion VALUES (idDireccion.nextval,'25 norte de la iglesia');
 SELECT * FROM direccion;
+--Insert de tabla estado
+INSERT INTO estado VALUES (idEstado.nextval,'Carmen');
+INSERT INTO estado VALUES (idEstado.nextval,'San Rafael');
+INSERT INTO estado VALUES (idEstado.nextval,'Bruos');
+INSERT INTO estado VALUES (idEstado.nextval,'Mangare');
+INSERT INTO estado VALUES (idEstado.nextval,'Aza');
+SELECT * FROM estado;
 --Insert de tabla participante
-INSERT INTO participante VALUES (idParticipante.nextval,)
+
+INSERT INTO participante VALUES (idParticipante.nextval,1,1,1,1,'Geralt de Rivia',11111,'Triss','g@TW3.com');
+INSERT INTO participante VALUES (idParticipante.nextval,2,2,2,2,'Cirilla de Cintra',11311,'WhereIam','Ciri@TW3.com');
+INSERT INTO participante VALUES (idParticipante.nextval,3,3,3,3,'Yennefer de Vengerberg',21111,'Geralt','Yen@TW3.com');
+INSERT INTO participante VALUES (idParticipante.nextval,4,4,4,4,'Triss Merigold',11431,'Geralt','Fire@TW3.com');
+INSERT INTO participante VALUES (idParticipante.nextval,5,5,5,5,'Emiel Regis',65411,'bloodandVine','Dblood@TW3.com');
+SELECT * FROM participante;
