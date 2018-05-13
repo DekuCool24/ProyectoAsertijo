@@ -136,7 +136,7 @@ CREATE TABLE estadoParticipanteAcertijo
 idEstadoParticipanteAcertijo INT NOT NULL PRIMARY KEY,
 nombreEstadoParticipanteAcertijo VARCHAR2 (50) NOT NULL UNIQUE
 );
-CREATE SEQUENCE idstadoParticipanteAcertijo MINVALUE 1 START WITH 1 CACHE 20;
+CREATE SEQUENCE idEstadoParticipanteAcertijo MINVALUE 1 START WITH 1 CACHE 20;
 CREATE TABLE participantePorConcurso
 (
 idParticipantePorConcurso INT NOT NULL PRIMARY KEY,
