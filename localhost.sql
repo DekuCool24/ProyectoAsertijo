@@ -13,6 +13,12 @@ CREATE TABLE ciudad
     nombreCiudad VARCHAR2 (50) NOT NULL UNIQUE
 );
 CREATE SEQUENCE idCiudad MINVALUE 1 START WITH 1 CACHE 20;
+CREATE TABLE estado
+(
+idEstado INT NOT NULL PRIMARY KEY,
+estado VARCHAR2 (50)
+);
+CREATE SEQUENCE idEstado MINVALUE 1 START WITH 1 CACHE 20;
 CREATE TABLE direccion
 (
     idDireccion INT NOT NULL PRIMARY KEY,
@@ -125,12 +131,12 @@ CONSTRAINT fkAcertijoPorConcurso FOREIGN KEY (idAcertijo) REFERENCES acertijo(id
 CONSTRAINT fkConcursoPorAcertijo FOREIGN KEY (idConcurso) REFERENCES concurso(idConcurso)
 );
 CREATE SEQUENCE idAcertijoPorConcurso MINVALUE 1 START WITH 1 CACHE 20;
-CREATE TABLE estado
+CREATE TABLE estadoParticipanteAcertijo
 (
-idEstado INT NOT NULL PRIMARY KEY,
-nombreEstado VARCHAR2 (50) NOT NULL UNIQUE
+idEstadoParticipanteAcertijo INT NOT NULL PRIMARY KEY,
+nombreEstadoParticipanteAcertijo VARCHAR2 (50) NOT NULL UNIQUE
 );
-CREATE SEQUENCE idEstado MINVALUE 1 START WITH 1 CACHE 20;
+CREATE SEQUENCE idstadoParticipanteAcertijo MINVALUE 1 START WITH 1 CACHE 20;
 CREATE TABLE participantePorConcurso
 (
 idParticipantePorConcurso INT NOT NULL PRIMARY KEY,
@@ -147,11 +153,11 @@ idParticipantePorAcertijo INT NOT NULL PRIMARY KEY,
 fechaUltimoIntento DATE NOT NULL,
 numeroIntento INT NOT NULL,
 idAcertijo INT,
-idEstado INT,
+idEstadoParticipanteAcertijo INT,
 idParticipante INT,
 CONSTRAINT fkParticipantePorAcertijo FOREIGN KEY (idParticipante) REFERENCES participante(idParticipante),
 CONSTRAINT fkAcertijoPorParticipante FOREIGN KEY (idAcertijo) REFERENCES acertijo(idAcertijo),
-CONSTRAINT fkEstadoPorParticipante FOREIGN key (idEstado) REFERENCES estado(idEstado)
+CONSTRAINT fkEstadoPorParticipante FOREIGN key (idEstadoParticipanteAcertijo) REFERENCES estadoParticipanteAcertijo(idEstadoParticipanteAcertijo)
 );
 CREATE SEQUENCE idParticipantePorAcertijo MINVALUE 1 START WITH 1 CACHE 20;
 CREATE TABLE ganador
@@ -164,3 +170,35 @@ CONSTRAINT fkParticipanteGanador FOREIGN KEY (idParticipante) REFERENCES partici
 CONSTRAINT fkConcursoGanador FOREIGN KEY (idConcurso) REFERENCES concurso(idConcurso)
 );
 CREATE SEQUENCE idGanador MINVALUE 1 START WITH 1 CACHE 20;
+
+--Llenado de bases de datos 
+--Insert de tabla pais
+INSERT INTO pais VALUES (idPais.nextval,'Costa Rica');
+INSERT INTO pais VALUES (idPais.nextval,'Puerto Rico');
+INSERT INTO pais VALUES (idPais.nextval,'Guatemala');
+INSERT INTO pais VALUES (idPais.nextval,'Argentina');
+INSERT INTO pais VALUES (idPais.nextval,'Panama');
+SELECT * FROM pais;
+--Insert de tabla ciudad
+INSERT INTO ciudad VALUES (idCiudad.nextval,'Cartago');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'San Jose');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'Victoria');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'San Ramon');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'AguaCaliente');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'Cartajena');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'Prosperos');
+INSERT INTO ciudad VALUES (idCiudad.nextval,'Menrique');
+SELECT * FROM ciudad;
+--Insert de tabla direccion
+INSERT INTO direccion VALUES (idDireccion.nextval,'50 al oeste de la piedra amarilla');
+INSERT INTO direccion VALUES (idDireccion.nextval,'Al frente del pali');
+INSERT INTO direccion VALUES (idDireccion.nextval,'A la par de la iglesia');
+INSERT INTO direccion VALUES (idDireccion.nextval,'Diagonal a la estacion del tren');
+INSERT INTO direccion VALUES (idDireccion.nextval,'Arriba de PapusBar');
+INSERT INTO direccion VALUES (idDireccion.nextval,'50 al este de la piedra verde');
+INSERT INTO direccion VALUES (idDireccion.nextval,'150 al oeste de la piedra amarilla');
+INSERT INTO direccion VALUES (idDireccion.nextval,'50 al sur de la piedra de la iglesia');
+INSERT INTO direccion VALUES (idDireccion.nextval,'25 norte de la iglesia');
+SELECT * FROM direccion;
+--Insert de tabla participante
+INSERT INTO participante VALUES (idParticipante.nextval,)
