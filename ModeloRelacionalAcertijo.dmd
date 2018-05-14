@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ModeloRelacionalAcertijo" id="EA390DEC-128B-3545-7FDF-CF736CA5C023" version="3.5">
-<createdBy>Dayanna</createdBy>
-<createdTime>2018-05-14 01:52:25 UTC</createdTime>
-<ownerDesignName>ModeloAcertijo1</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>EA390DEC-128B-3545-7FDF-CF736CA5C023</designId>
-</OSDM_Design>
