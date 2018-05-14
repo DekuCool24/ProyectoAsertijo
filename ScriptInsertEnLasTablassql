@@ -1,0 +1,514 @@
+-----------------------------------------------------------------------------------------------
+--Insercion de los datos en las tablas
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Pais
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO pais VALUES (idPais.nextval,'Costa Rica');
+INSERT INTO pais VALUES (idPais.nextval,'Puerto Rico');
+INSERT INTO pais VALUES (idPais.nextval,'Guatemala');
+INSERT INTO pais VALUES (idPais.nextval,'Argentina');
+INSERT INTO pais VALUES (idPais.nextval,'Panama');
+select * from pais;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Concurso
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO concurso VALUES (idConcurso.nextval,'Todo al ganador');
+INSERT INTO concurso VALUES (idConcurso.nextval,'Pura Vibra');
+INSERT INTO concurso VALUES (idConcurso.nextval,'Premio Mayor');
+INSERT INTO concurso VALUES (idConcurso.nextval,'Easy Peasy Lemon Squeezy');
+INSERT INTO concurso VALUES (idConcurso.nextval,'Pal Tigre');
+select * from CONCURSO;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Empresa
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Dos Pinos');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Asus');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'TecnoK');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Oreo');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Hype Formatos');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Skynet');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Siri');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'GlaDos');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Valve');
+INSERT INTO EMPRESA VALUES (IDEMPRESA.nextval,'Aperture Science');
+select * from EMPRESA; 
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Estado
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Carmen');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'San Rafael');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Bruos');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Mangare');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Aza');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Guarco');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Buenos Aires');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Los Angeles');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Atenas');
+INSERT INTO ESTADO VALUES (IDESTADO.nextval,'Palmares');
+Select * from ESTADO;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Ciudad
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Cartago');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'San Jose');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Victoria');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'San Ramon');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Aguacaliente');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Cartajena');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Prosperos');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Menrique');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'Izabal');
+INSERT INTO CIUDAD VALUES (IDCIUDAD.nextval,'San Luis');
+select * from CIUDAD;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla EstadoAcertijo
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO ESTADOACERTIJO VALUES (IDESTADOACERTIJO.nextval,'Activo');
+INSERT INTO ESTADOACERTIJO VALUES (IDESTADOACERTIJO.nextval,'Ausente');
+INSERT INTO ESTADOACERTIJO VALUES (IDESTADOACERTIJO.nextval,'Ganador');
+INSERT INTO ESTADOACERTIJO VALUES (IDESTADOACERTIJO.nextval,'Participando');
+INSERT INTO ESTADOACERTIJO VALUES (IDESTADOACERTIJO.nextval,'Iniciado');
+select * from ESTADOACERTIJO;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Direccion
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'50 metros al oeste de la piedra amarilla');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'Al frente del pali');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'A la par de la iglesia');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'Diagonal a la estacion del tren');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'Arriba de PapusBar');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'50 metros al este de la piedra verde');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'150 metros al oeste de la piedra amarilla');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'50 metros al sur de la piedra de la iglesia');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'25 metros norte de la iglesia');
+INSERT INTO DIRECCION VALUES (IDDIRECCION.nextval,'125 metros sur de la escuela central');
+select * From DIRECCION;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Acertijo
+-- acertijo (IDACERTIJO, fechaInicio, nombreAcertijo, xPosicion, yPosicion, idCiudad, idPais, 
+--idEstado, idConcurso)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO ACERTIJO VALUES (IDACERTIJO.nextval, TO_DATE ('12/01/2018', 'DD/MM/YYYY'),
+'Sele pal Mundial', 42, 12, 2, 1, 1, 1);
+
+INSERT INTO ACERTIJO VALUES (IDACERTIJO.nextval, TO_DATE ('13/02/2018', 'DD/MM/YYYY'),
+'Hacia el Infinito', 56, 59, 9, 2, 2, 2);
+
+INSERT INTO ACERTIJO VALUES (IDACERTIJO.nextval, TO_DATE ('14/03/2018', 'DD/MM/YYYY'),
+'Netflix and Search', 31, 47, 1, 3, 3, 3);
+
+INSERT INTO ACERTIJO VALUES (IDACERTIJO.nextval, TO_DATE ('15/04/2018', 'DD/MM/YYYY'),
+'Dad of Boy', 78, 24, 8, 4, 4, 4);
+
+INSERT INTO ACERTIJO VALUES (IDACERTIJO.nextval, TO_DATE ('16/05/2018', 'DD/MM/YYYY'),
+'Nathan Break', 95, 33, 7, 5, 5, 5);
+
+Select * From ACERTIJO;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Pista
+-- Pista (IDPISTA, pista, acertijo)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'En la sabana', 1);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Dentro del Estadio Nacional', 1);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Debajo del aciento numero 10', 1);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'En el supermercado Los Hermanos', 2);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'En el Area de los refrescos', 2);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Debajo de las cervezas imperial', 2);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Dentro del Mall Occidente', 3);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'En el area de los cines', 3);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Detras de la puerta numero 2', 3);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Parque de las Flores', 4);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Centro del parque', 4);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'En el centro del Kiosco', 4);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Zoologico Rescate Animal', 5);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'Area de los Tigres', 5);
+INSERT INTO PISTA VALUES (IDPISTA.nextval,'En la pata del tigre embalsamado', 5);
+Select * From pista;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Premio
+-- Premio (idPremio, premio, puesto, idConcurso)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Entradas al mundial', 1, 1);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Camisa Autografiada', 2, 1);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Peluche de la mascota del mundial', 3, 1);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Sticker oficial del mundial', 4, 1);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Viaje a la NASA', 1, 2);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Un pedazo de meteorito', 2, 2);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Entradas al cine', 3, 2);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Chocolate Lunar', 4, 2);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Inscripcion anual en Netflix', 1, 3);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'6 meses en Netflix', 2, 3);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'3 meses en Netflix', 3, 3);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'1 mes de Netflix', 4, 3);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Juego gratis a escoger en la PlayStore', 1, 4);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'3 Meses en la PlayStore', 2, 4);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Cupon de descuento en Steam', 3, 4);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Comic', 4, 4);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Carro', 1, 5);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Moto', 2, 5);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Bicicleta', 3, 5);
+INSERT INTO premio VALUES (IDPREMIO.nextval,'Patines', 4, 5);
+Select * From premio;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Participante
+-- Participante (idParticipante, idPais, idCiudad, idEstado, idDireccion, nombreParticipante, 
+--telefonoParticipante, contrasena, emailParticipante)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 1, 1, 1, 10, 'Geralt de Rivia', 25169802,
+'11111', 'g@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 2, 2, 2, 1, 'Cirilla de Cintra', 45362186,
+'11311', 'Ciri@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 3, 3, 3, 9, 'Yennefer de Vengerberg', 
+32857196, '21111', 'Yen@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 4, 4, 4, 2, 'Triss Merigold', 26875413,
+'11431', 'Fire@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 5, 3, 5, 7, 'Emiel Regis', 98652145,
+'65411', 'Dblood@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 2, 1, 1, 3, 'Kratos', 32565412,
+'85203', 'CoolGuy@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 5, 4, 3, 6, 'Chell', 78545698,
+'74102', 'ggez@blizz.co.us');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 4, 2, 4, 4, 'Raynor', 98566589,
+'96302', '2good4U@ego.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 3, 5, 2, 5, 'Kerrigan', 14725836,
+'34621', 'placeIt@TW3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 1, 3, 5, 9, 'Steven', 96385274,
+'97628', 'YOLO@L2.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 5, 4, 1, 2, 'Rose', 13469728,
+'24583', 'greenDead@DP2.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 2, 1, 3, 10, 'Asriel', 53758691,
+'20356', 'DCvsM@Fox.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 4, 2, 4, 8, 'Sonia', 87796556,
+'37820', 'Pixnar@money.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 3, 3, 2, 3, 'Alina', 32210506,
+'42860', 'CheckList@dude.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 1, 5, 3, 5, 'Legolas', 37569420,
+'97153', 'Wakanda@forever.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 2, 1, 1, 4, 'Aragorn', 20505661,
+'28289', 'IronM@Giant.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 3, 2, 5, 6, 'Bob', 21118714,
+'18183', '2Late@e3.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 5, 4, 2, 7, 'Frank', 88879854,
+'56422', 'Steven@universe.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 4, 3, 4, 1, 'Connie', 56810011,
+'62594', 'Peal@Diamond.com');
+
+INSERT INTO Participante VALUES (IDPARTICIPANTE.nextval, 2, 1, 1, 4, 'Pepper', 24700101,
+'93827', 'Zeus@Percy.com');
+
+Select * From Participante;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla Ganador
+-- Ganador (idGanador, fechaVictoria, idConcurso, idParticipante)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO GANADOR VALUES (IDGANADOR.nextval, TO_DATE ('13/1/2018', 'DD/MM/YYYY'), 1, 1);
+INSERT INTO GANADOR VALUES (IDGANADOR.nextval, TO_DATE ('14/02/2018', 'DD/MM/YYYY'), 2, 15);
+INSERT INTO GANADOR VALUES (IDGANADOR.nextval, TO_DATE ('15/03/2018', 'DD/MM/YYYY'), 3, 4);
+INSERT INTO GANADOR VALUES (IDGANADOR.nextval, TO_DATE ('16/04/2018', 'DD/MM/YYYY'), 4, 18);
+INSERT INTO GANADOR VALUES (IDGANADOR.nextval, TO_DATE ('17/05/2018', 'DD/MM/YYYY'), 5, 10);
+Select * From GANADOR;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla AcertijoPorConcurso
+-- AcertijoPorConcurso (idAcertijoPorConcurso, idAcertijo, idConcurso)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO ACERTIJOPORCONCURSO VALUES (IDACERTIJOPORCONCURSO.nextval, 1, 1);
+INSERT INTO ACERTIJOPORCONCURSO VALUES (IDACERTIJOPORCONCURSO.nextval, 2, 2);
+INSERT INTO ACERTIJOPORCONCURSO VALUES (IDACERTIJOPORCONCURSO.nextval, 3, 3);
+INSERT INTO ACERTIJOPORCONCURSO VALUES (IDACERTIJOPORCONCURSO.nextval, 4, 4);
+INSERT INTO ACERTIJOPORCONCURSO VALUES (IDACERTIJOPORCONCURSO.nextval, 5, 5);
+Select * From ACERTIJOPORCONCURSO;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla GANADOR
+-- GANADOR (idGanador, fechaVictoria, idConcurso, idParticipante)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO GANADOR VALUES ( IDGANADOR.nextval, TO_DATE ('13/1/2018', 'DD/MM/YYYY'), 1, 1);
+INSERT INTO GANADOR VALUES ( IDGANADOR.nextval, TO_DATE ('14/02/2018', 'DD/MM/YYYY'), 2, 15);
+INSERT INTO GANADOR VALUES ( IDGANADOR.nextval, TO_DATE ('15/03/2018', 'DD/MM/YYYY'), 3, 4);
+INSERT INTO GANADOR VALUES ( IDGANADOR.nextval, TO_DATE ('16/04/2018', 'DD/MM/YYYY'), 4, 18);
+INSERT INTO GANADOR VALUES ( IDGANADOR.nextval, TO_DATE ('17/05/2018', 'DD/MM/YYYY'), 5, 10);
+Select * From GANADOR;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla PistaPorParticipante
+-- GANADOR (idPistaPorParticipante, idParticipante, idPista, fechaEnvioPista)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO PistaPorParticipante VALUES (1, 1, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('12/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (2, 2, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('12/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (3, 3, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('12/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (4, 4, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('13/02/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (5, 5, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('13/02/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (6, 6, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('13/02/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (7, 7, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('14/03/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (8, 8, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('14/03/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (9, 9, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('14/03/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (10, 10, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('15/04/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (11, 11, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('15/04/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (12, 12, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('15/04/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (13, 13, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('16/05/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (14, 14, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('16/05/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (15, 15, IDPISTAPORPARTICIPANTE.nextval, 
+TO_DATE ('16/05/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (IDPISTAPORPARTICIPANTE.nextval, 16, 1, 
+TO_DATE ('12/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (IDPISTAPORPARTICIPANTE.nextval, 17, 2, 
+TO_DATE ('12/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (IDPISTAPORPARTICIPANTE.nextval, 18, 3, 
+TO_DATE ('12/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (IDPISTAPORPARTICIPANTE.nextval, 19, 4, 
+TO_DATE ('13/02/2018', 'DD/MM/YYYY'));
+
+INSERT INTO PistaPorParticipante VALUES (IDPISTAPORPARTICIPANTE.nextval, 20, 5, 
+TO_DATE ('13/02/2018', 'DD/MM/YYYY'));
+
+Select * from PISTAPORPARTICIPANTE;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla participantePorConcurso
+-- participantePorConcurso (idParticipantePorConcurso, idParticipante, idConcurso, 
+--fechaInscripcion)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 1, 1, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 2, 1, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 3, 1, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 4, 2, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 5, 2, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 6, 2, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 7, 3, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 8, 3, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 9, 3, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 10, 4, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 11, 4, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 12, 4, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 13, 5, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 14, 5, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 15, 5, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 16, 1, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 17, 1, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 18, 1, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 19, 2, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+INSERT INTO participantePorConcurso VALUES (IDPARTICIPANTEPORCONCURSO.nextval, 20, 2, 
+TO_DATE ('1/1/2018', 'DD/MM/YYYY'));
+
+select * from participantePorConcurso;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla sedeEmpresa
+-- SedeEmpresa (idSedeEmpresa, idEmpresa, idPais, idCiudad, idEstado, idDireccion)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 10, 1, 2, 10, 1);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 5, 5, 10, 1, 2);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 9, 2, 8, 5, 3);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 2, 4, 3, 2, 4);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 8, 3, 5, 8, 5);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 3, 5, 4, 3, 6);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 7, 1, 1, 7, 7);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 4, 2, 6, 4, 8);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 6, 4, 7, 6, 9);
+INSERT INTO sedeEmpresa VALUES (IDSEDEEMPRESA.nextval, 1, 3, 9, 9, 10);
+select * from sedeEmpresa;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla patrocinador
+-- patrocinador (idPatrocinador, idSedeEmpresa, idConcurso)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 1, 1);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 2, 5);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 3, 2);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 4, 4);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 5, 3);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 6, 5);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 7, 1);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 8, 2);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 9, 4);
+INSERT INTO patrocinador VALUES (IDPATROCINADOR.nextval, 10, 3);
+select * from patrocinador;
+
+-----------------------------------------------------------------------------------------------
+-- Insercion Tabla ParticipantePorAcertijo
+-- participantePorAcertijo (idParticipantePorAcertijo, fechaUltimoIntento, numeroIntento, 
+--idAcertijo, idEstadoAcertijo, idParticipante)
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('13/1/2018', 'DD/MM/YYYY'), 3, 1, 3, 1);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('14/02/2018', 'DD/MM/YYYY'), 5, 2, 4, 2);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('21/01/2018', 'DD/MM/YYYY'), 4, 3, 4, 3);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('15/03/2018', 'DD/MM/YYYY'), 7, 4, 3, 4);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('3/2/2018', 'DD/MM/YYYY'), 2, 5, 4, 5);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('10/3/2018', 'DD/MM/YYYY'), 5, 1, 4, 6);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('7/2/2018', 'DD/MM/YYYY'), 9, 2, 4, 7);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('2/2/2018', 'DD/MM/YYYY'), 1, 3, 4, 8);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('3/3/2018', 'DD/MM/YYYY'), 2, 4, 4, 9);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('17/05/2018', 'DD/MM/YYYY'), 3, 5, 3, 10);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('5/1/2018', 'DD/MM/YYYY'), 6, 1, 4, 11);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('4/4/2018', 'DD/MM/YYYY'), 5, 2, 4, 12);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('2/3/2018', 'DD/MM/YYYY'), 2, 3, 4, 13);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('1/3/2018', 'DD/MM/YYYY'), 7, 4, 4, 14);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('14/02/2018', 'DD/MM/YYYY'), 4, 5, 3, 15);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('11/4/2018', 'DD/MM/YYYY'), 5, 1, 4, 16);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('12/2/2018', 'DD/MM/YYYY'), 3, 2, 4, 17);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('16/04/2018', 'DD/MM/YYYY'), 2, 3, 3, 18);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('22/1/2018', 'DD/MM/YYYY'), 1, 4, 4, 19);
+
+INSERT INTO ParticipantePorAcertijo VALUES (IDPARTICIPANTEPORACERTIJO.nextval, 
+TO_DATE ('23/2/2018', 'DD/MM/YYYY'), 6, 5, 4, 20);
+
+select * from ParticipantePorAcertijo;
+
