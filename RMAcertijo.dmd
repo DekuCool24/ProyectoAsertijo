@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="RMAcertijo" id="5228023D-9075-F3CF-87B1-DDBE19493FA5" version="3.5">
+<createdBy>Dayanna</createdBy>
+<createdTime>2018-05-18 03:40:39 UTC</createdTime>
+<ownerDesignName>RMAcertijo</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5228023D-9075-F3CF-87B1-DDBE19493FA5</designId>
+</OSDM_Design>
